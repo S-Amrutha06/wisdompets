@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <h3 class="shadow-lg" style="text-align:center;margin-bottom:5%;padding:2%;background-color:rgb(59, 195, 204);;"> Adopt new pot</h3>
+    <form class="col-6 mx-auto card p-3 shadow-lg" method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" name="name" required class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="add_line_1" class="form-label">Address Line 1</label>
+            <input type="text" name="add_line_1" required class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="add_line_2" class="form-label">Address Line 2</label>
+            <input type="text" name="add_line_2" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="city" class="form-label">City</label>
+            <input type="text" name="city" required class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary shadow-lg">Adopt</button>
+    </form>
+</div>
+{% endblock %}
